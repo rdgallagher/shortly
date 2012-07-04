@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bson_ext', '~> 1.5'
 gem 'devise'
 gem 'haml-rails'
 gem 'jquery-rails'
@@ -28,6 +29,6 @@ group :development, :test do
   gem "rspec-core", "2.7"
   gem "rspec-expectations", "2.7"
   gem "rspec-mocks", "2.7"
-  gem 'ruby-debug19', :require => 'ruby-debug'
+#  gem 'ruby-debug19', :require => 'ruby-debug'
   gem "spork"
 end

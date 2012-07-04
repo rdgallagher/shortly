@@ -61,5 +61,9 @@ module Shrtly
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Set logging to STDOUT for Unicorn
+    # @see http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html
+    config.logger = Logger.new(STDOUT)
   end
 end
