@@ -24,11 +24,13 @@ group :development, :test do
   gem "capybara", ">= 1.1.2"
   gem "database_cleaner"
   gem "fabrication"
+  gem "ffaker"
   gem "rspec", "2.7"
   gem "rspec-rails", "2.7"
   gem "rspec-core", "2.7"
   gem "rspec-expectations", "2.7"
   gem "rspec-mocks", "2.7"
 #  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'shoulda-matchers'
   gem "spork"
 end
