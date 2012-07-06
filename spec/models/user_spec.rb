@@ -1,5 +1,23 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let :user do
+    Fabricate(:user)
+  end
+
+  context 'validations' do
+    it { should validate_presence_of :email }
+
+    it 'should validate uniqueness of email' do
+      pending 'password and confirm password'
+
+#      user.save!
+
+#      User.new({ email: Faker::Internet.email }).should_not be_valid
+    end
+  end
+
+  context 'associations' do
+
+  end
 end
