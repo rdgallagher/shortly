@@ -15,4 +15,10 @@ describe Shorten do
       Shorten.new({ long_url: Faker::Internet.http_url, short_url: shorten.short_url }).should_not be_valid
     end
   end
+
+  context 'associations' do
+    pending 'matcher not available in mongoid'
+
+#    it { should belong_to :user }
+  end
 end

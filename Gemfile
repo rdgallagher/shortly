@@ -25,6 +25,7 @@ group :development, :test do
   gem "database_cleaner"
   gem "fabrication"
   gem "ffaker"
+  gem "fuubar"
   gem "rspec", "2.7"
   gem "rspec-rails", "2.7"
   gem "rspec-core", "2.7"

@@ -64,6 +64,10 @@ GEM
     fabrication (2.0.3)
     ffaker (1.14.0)
     ffi (1.0.11)
+    fuubar (1.0.0)
+      rspec (~> 2.0)
+      rspec-instafail (~> 0.2.0)
+      ruby-progressbar (~> 0.0.10)
     haml (3.1.6)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -128,12 +132,14 @@ GEM
     rspec-core (2.7.0)
     rspec-expectations (2.7.0)
       diff-lcs (~> 1.1.2)
+    rspec-instafail (0.2.4)
     rspec-mocks (2.7.0)
     rspec-rails (2.7.0)
       actionpack (~> 3.0)
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.7.0)
+    ruby-progressbar (0.0.10)
     rubyzip (0.9.9)
     sass (3.1.18)
     sass-rails (3.2.5)
@@ -180,6 +186,7 @@ DEPENDENCIES
   devise
   fabrication
   ffaker
+  fuubar
   haml-rails
   jquery-rails
   mongoid (~> 2.4)

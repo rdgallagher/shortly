@@ -13,4 +13,6 @@ class Shorten
   index({ long_url: 1 }, { background: true })
   index({ short_url: 1 }, { background: true, unique: true })
   index({ user_id: 1 }, { background: true })
+
+  belongs_to :user
 end
