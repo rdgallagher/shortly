@@ -40,7 +40,7 @@ class User
   ## Token authenticatable
   # field :authentication_token, :type => String
 
-  index({ email: 1 }, { background: true, unique: true })
+  index(:email, { background: true, unique: true })
 
   has_many :shortens
 end

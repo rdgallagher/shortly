@@ -7,8 +7,8 @@ class ShortensController < ApplicationController
   end
 
   def show
-    @shorten = Shorten.find_by_short_url(params[:short_url])
-    @shorten.hit_count += 1
+    @shorten = Shorten.where(short_url: params[:short_url]).first
+    @shorten.hit_count = @shorten.hit_count + 1
     @shorten.save!
     redirect_to @shorten.long_url, status: 301
   end

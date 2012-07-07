@@ -12,7 +12,7 @@ class Shorten
   validates_presence_of :short_url
   validates_uniqueness_of :short_url
 
-  index({ long_url: 1 }, { background: true })
-  index({ short_url: 1 }, { background: true, unique: true })
-  index({ user_id: 1 }, { background: true })
+  index(:long_url, { background: true })
+  index(:short_url, { background: true, unique: true })
+  index(:user_id, { background: true })
 end
