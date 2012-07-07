@@ -1,5 +1,11 @@
 Shrtly::Application.routes.draw do
+
+  root to: "shortens#index"
+
   devise_for :users
+
+  resources :shortens, only: [:index, :create, :destroy, :new]
+  match ':short_url' => 'shortens#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

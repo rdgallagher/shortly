@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Shorten do
-  let :shorten do
-    Fabricate(:shorten)
+  let :shortens do
+    Fabricate(:shortens)
   end
 
   context 'validations' do
