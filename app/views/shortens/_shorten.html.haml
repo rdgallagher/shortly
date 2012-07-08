@@ -1,6 +1,6 @@
 %tr
   %td.hit-count= shorten.hit_count
-  %td.short-url= link_to shorten.short_url, full_url(shorten.short_url)
+  %td.short-url= link_to shorten.short_url, full_url(shorten.short_url), target: '_blank'
   %td.long-url= shorten.long_url
   %td.delete
     - if signed_in? and current_user == shorten.user

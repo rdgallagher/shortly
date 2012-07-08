@@ -1,6 +1,8 @@
 class ShortensController < ApplicationController
   include ShortensHelper
 
+  before_filter :check_owner, only: [:destroy]
+
   def index
     @shortens = Shorten.desc(:hit_count).page(params[:page])
 
@@ -31,19 +33,26 @@ class ShortensController < ApplicationController
 
     current_user.shortens << @shorten if signed_in?
 
-    respond_to do |format|
-      if @shorten.save(validate: false)
-        flash[:success] = "Here is your short URL: #{full_url(@shorten.short_url)}"
-        format.html { redirect_to root_path }
-        format.js { render js: @shorten, status: :created, location: @shorten }
-      else
-        format.html { render :new }
-        format.js { render js: @shorten.errors, status: :unprocessable_entity }
-      end
+    # No need to validate here as we did so in the loop earlier
+    if @shorten.save(validate: false)
+      flash[:success] = "Here is your short URL: #{full_url(@shorten.short_url)}"
+      redirect_to :back
+    else
+      render :new
     end
   end
 
   def destroy
-    # TODO: Correct user filter
+    @shorten = Shorten.find(params[:id])
+    long_url = @shorten.long_url
+    @shorten.destroy
+    flash[:success] = "Your Shorten to #{long_url} has been deleted."
+    redirect_to :back
   end
+
+  private
+
+    def check_owner
+      redirect_to(root_path) unless signed_in? and current_user.shortens.find(params[:id]).present?
+    end
 end
