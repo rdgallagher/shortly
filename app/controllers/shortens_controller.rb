@@ -25,16 +25,20 @@ class ShortensController < ApplicationController
 
     # Assign SecureRandom short_url - if exists, pick another
     while !@shorten.valid?
-      @shorten.short_url = SecureRandom.urlsafe_base64(6)
+      @shorten.short_url = SecureRandom.urlsafe_base64(4)
     end
 
     current_user.shortens << @shorten if signed_in?
 
-    if @shorten.save(validate: false)
-      flash[:success] = "Here is your short URL: #{request.protocol + request.domain + (request.port.nil? ? '' : ":#{request.port}") + '/' + @shorten.short_url}"
-      redirect_to root_path
-    else
-      render :new
+    respond_to do |format|
+      if @shorten.save(validate: false)
+        flash[:success] = "Here is your short URL: #{request.protocol + request.domain + (request.port.nil? ? '' : ":#{request.port}") + '/' + @shorten.short_url}"
+        format.html { redirect_to root_path }
+        format.js { render js: @shorten, status: :created, location: @shorten }
+      else
+        format.html { render :new }
+        format.js { render js: @shorten.errors, status: :unprocessable_entity }
+      end
     end
   end
 

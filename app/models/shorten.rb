@@ -15,4 +15,6 @@ class Shorten
   index(:long_url, { background: true })
   index(:short_url, { background: true, unique: true })
   index(:user_id, { background: true })
+
+  belongs_to :user
 end

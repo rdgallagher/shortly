@@ -2,10 +2,20 @@ Shrtly::Application.routes.draw do
 
   root to: "shortens#index"
 
-  devise_for :users
+  devise_for :users, skip: [:sessions]
+  as :user do
+    get 'signup' => 'devise/registrations#new', as: :new_user_registration
+    post 'signup' => 'devise/registrations#create', as: :user_registration
+    get 'settings' => 'devise/registrations#edit', as: :edit_user_registration
+    put 'settings' => 'devise/registrations#update', as: :edit_user_registration
+    get 'login' => 'devise/sessions#new', as: :new_user_session
+    post 'login' => 'devise/sessions#create', as: :user_session
+    get 'logout' => 'devise/sessions#destroy', as: :destroy_user_session
+  end
 
+  resources :users, only: [:show]
   resources :shortens, only: [:index, :create, :destroy, :new]
-  match ':short_url' => 'shortens#show'
+  get ':short_url' => 'shortens#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
