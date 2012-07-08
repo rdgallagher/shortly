@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title Shrtly
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+
+    %header
+      %hgroup
+        %h1= link_to 'Short.ly', root_path
+        %h2 Mama's little baby loves Shortenin'!
+
+      %ul.links
+        - if signed_in?
+          %li= link_to 'My Shortens', current_user, class: 'button'
+          %li= link_to 'Settings', '/settings', class: 'button'
+          %li= link_to 'Log out', '/logout', class: 'button'
+        - else
+          %li= link_to 'Signup', '/signup', class: 'button'
+          %li= link_to 'Login', '/login', class: 'button'
+
+    - flash.each do |key, value|
+      = content_tag(:div, value, class: "alert alert-#{key}")
+
+    = yield
