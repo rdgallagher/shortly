@@ -7,12 +7,13 @@ test:
   database: shrtly_test
 
 # set these environment variables on your prod server
+<% uri = URI.parse(ENV['MONGOHQ_URL']) %>
 production:
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
+  host: <%= uri.host %>
+  port: <%= uri.port %>
+  username: <%= uri.user %>
+  password: <%= uri.password %>
+  database: <%= uri.path.sub('/','') %>
   # slaves:
   #   - host: slave1.local
   #     port: 27018
