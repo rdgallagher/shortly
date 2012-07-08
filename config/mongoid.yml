@@ -7,7 +7,8 @@ test:
   database: shortly_test
 
 # set these environment variables on your prod server
-<% uri = URI.parse(ENV['MONGOHQ_URL']) %>
+<% if ENV['MONGOHQ_URL'] %>
+  <% uri = URI.parse(ENV['MONGOHQ_URL']) %>
 production:
   host: <%= uri.host %>
   port: <%= uri.port %>
@@ -19,3 +20,4 @@ production:
   #     port: 27018
   #   - host: slave2.local
   #     port: 27019
+<% end %>

@@ -11,7 +11,7 @@
     %header.group
       %hgroup
         %h1= link_to 'Short.ly', root_path
-        %h2 Mama's little baby loves Shortenin'!
+        %h2 Life's too short for long URLs
 
       %ul.links
         - if signed_in?
@@ -23,7 +23,8 @@
           %li= link_to 'Login', '/login', class: 'btn'
 
     - flash.each do |key, value|
-      = content_tag(:div, value, class: "alert alert-#{key}")
+      .alert{ class: "alert-#{key}" }
+        = value
 
     %section#main
       = yield

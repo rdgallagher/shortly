@@ -35,7 +35,7 @@ class ShortensController < ApplicationController
 
     # No need to validate here as we did so in the loop earlier
     if @shorten.save(validate: false)
-      flash[:success] = "Here is your short URL: #{full_url(@shorten.short_url)}"
+      flash[:success] = "Here is your short URL: <a href='#{full_url(@shorten.short_url)}' target='_blank'>#{full_url(@shorten.short_url)}</a>".html_safe
       redirect_to :back
     else
       render :new
