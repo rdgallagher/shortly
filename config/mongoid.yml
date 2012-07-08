@@ -1,10 +1,10 @@
 development:
   host: localhost
-  database: shrtly_development
+  database: shortly_development
 
 test:
   host: localhost
-  database: shrtly_test
+  database: shortly_test
 
 # set these environment variables on your prod server
 <% uri = URI.parse(ENV['MONGOHQ_URL']) %>
