@@ -1,8 +1,8 @@
 class ShortensController < ApplicationController
 
   def index
-    #@shortens = Shorten.find(:all, order: "hit_count")
-    @shortens = Shorten.find(:all)
+    @shortens = Shorten.desc(:hit_count)
+
     @shorten = Shorten.new
   end
 
@@ -18,16 +18,24 @@ class ShortensController < ApplicationController
   end
 
   def create
-    # TODO: Create short URL. (@see SecureRandom) If exists, pick another
-    @shorten = Shorten.new(params[:shortens])
-    #@shorten.short_url = SecureRandom.urlsafe_base64(6)
+    @shorten = Shorten.new(params[:shorten])
 
-    #begin
-      @shorten.save!
+    # Add protocol if missing
+    @shorten.long_url = 'http://' + @shorten.long_url unless @shorten.long_url.start_with?('http://', 'https://')
 
-    #rescue
+    # Assign SecureRandom short_url - if exists, pick another
+    while !@shorten.valid?
+      @shorten.short_url = SecureRandom.urlsafe_base64(6)
+    end
 
-    #end
+    current_user.shortens << @shorten if signed_in?
+
+    if @shorten.save(validate: false)
+      flash[:success] = "Here is your short URL: #{request.protocol + request.domain + (request.port.nil? ? '' : ":#{request.port}") + '/' + @shorten.short_url}"
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
