@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c368cab7-d783-4a8f-bc2c-9cfa6a9938f5" name="Default" comment="Shorten redirection working.&#10;TODO: Specs">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="" />
+    <list default="true" id="c368cab7-d783-4a8f-bc2c-9cfa6a9938f5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shrtly.iml" afterPath="$PROJECT_DIR$/.idea/shrtly.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/shortens_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/shortens_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/shortens_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/shortens_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/shorten.rb" afterPath="$PROJECT_DIR$/app/models/shorten.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shortens/_shorten.html.haml" afterPath="$PROJECT_DIR$/app/views/shortens/_shorten.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shortens/_shorten_form.html.haml" afterPath="$PROJECT_DIR$/app/views/shortens/_shorten_form.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shortens/index.html.haml" afterPath="$PROJECT_DIR$/app/views/shortens/index.html.haml" />
     </list>
     <ignored path="shrtly.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,91 +31,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="shortens_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/shortens_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="161" selection-start="913" selection-end="1021" vertical-scroll-proportion="0.0">
+            <state line="3" column="59" selection-start="108" selection-end="121" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shorten.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/shorten.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="9" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="10" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.29411766">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/show.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="20" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shortens/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="3" selection-start="37" selection-end="37" vertical-scroll-proportion="0.07772021">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_shorten.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shortens/_shorten.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="58" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shortens_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/shortens_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="25" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_shorten_form.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shortens/_shorten_form.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="51" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
+            <state line="5" column="20" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,22 +80,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/shortens/create.js.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/shortens_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/shortens/_shorten_form.html.haml" />
         <option value="$PROJECT_DIR$/app/models/shorten.rb" />
         <option value="$PROJECT_DIR$/app/helpers/shortens_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/shortens/_shorten.html.haml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/controllers/shortens_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/shortens/index.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       </list>
     </option>
   </component>
@@ -968,7 +912,15 @@
       <created>1341752687011</created>
       <updated>1341752687012</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="User page with list of user's shortens.&#10;TODO: Specs">
+      <created>1341764796057</created>
+      <updated>1341764796057</updated>
+    </task>
+    <task id="LOCAL-00011" summary="User page with list of user's shortens.&#10;TODO: Specs">
+      <created>1341764810872</created>
+      <updated>1341764810872</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1033,7 +985,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shortening creation improvements.&#10;- Added success message&#10;- Adding protocol to long url if missing&#10;- Ordering by hit count&#10;- Adding to user's account if logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="User page with list of user's shortens.&#10;TODO: Specs" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1054,6 +1006,7 @@
     <MESSAGE value="Shorten Controller&#10;Shorten Views&#10;Shorten Routes&#10;Added Twitter Bootstrap&#10;Added SimpleForm&#10;TODO: Specs" />
     <MESSAGE value="Shorten redirection working.&#10;TODO: Specs" />
     <MESSAGE value="Shortening creation improvements.&#10;- Added success message&#10;- Adding protocol to long url if missing&#10;- Ordering by hit count&#10;- Adding to user's account if logged in" />
+    <MESSAGE value="User page with list of user's shortens.&#10;TODO: Specs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1066,13 +1019,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/bootstrap.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p125/gems/mongoid-2.4.11/lib/mongoid/finders.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="35" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.0">
@@ -1110,7 +1056,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shortens/_shorten_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="51" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
+        <state line="1" column="51" selection-start="122" selection-end="122" vertical-scroll-proportion="0.024115756">
           <folding />
         </state>
       </provider>
@@ -1131,14 +1077,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/shortens_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+        <state line="2" column="25" selection-start="48" selection-end="48" vertical-scroll-proportion="0.048231512">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shortens/_shorten.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="58" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+        <state line="1" column="58" selection-start="62" selection-end="62" vertical-scroll-proportion="0.024115756">
           <folding />
         </state>
       </provider>
@@ -1150,13 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
@@ -1164,16 +1103,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/shortens_controller.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="161" selection-start="913" selection-end="1021" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shortens/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="37" selection-end="37" vertical-scroll-proportion="0.07772021">
+        <state line="5" column="20" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/shortens_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="59" selection-start="108" selection-end="121" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.29411766">
           <folding />
         </state>
       </provider>

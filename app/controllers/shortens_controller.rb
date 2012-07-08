@@ -1,7 +1,7 @@
 class ShortensController < ApplicationController
 
   def index
-    @shortens = Shorten.desc(:hit_count)
+    @shortens = Shorten.desc(:hit_count).page(params[:page])
 
     @shorten = Shorten.new
   end
