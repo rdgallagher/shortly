@@ -1,4 +1,4 @@
-Shrtly::Application.routes.draw do
+Shortly::Application.routes.draw do
 
   root to: "shortens#index"
 

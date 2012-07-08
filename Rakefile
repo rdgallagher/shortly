@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Shrtly::Application.load_tasks
+Shortly::Application.load_tasks
