@@ -1,4 +1,5 @@
 class ShortensController < ApplicationController
+  include ShortensHelper
 
   def index
     @shortens = Shorten.desc(:hit_count).page(params[:page])
@@ -32,7 +33,7 @@ class ShortensController < ApplicationController
 
     respond_to do |format|
       if @shorten.save(validate: false)
-        flash[:success] = "Here is your short URL: #{request.protocol + request.domain + (request.port.nil? ? '' : ":#{request.port}") + '/' + @shorten.short_url}"
+        flash[:success] = "Here is your short URL: #{full_url(@shorten.short_url)}"
         format.html { redirect_to root_path }
         format.js { render js: @shorten, status: :created, location: @shorten }
       else

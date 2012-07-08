@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @shortens = @user.shortens.page(params[:page])
+    @shorten = Shorten.new
   end
 
   private

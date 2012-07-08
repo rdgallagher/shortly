@@ -1,4 +1,7 @@
-%li
-  = link_to shorten.short_url, full_url(shorten.short_url)
-  = shorten.long_url
-  = shorten.hit_count
+%tr
+  %td.hit-count= shorten.hit_count
+  %td.short-url= link_to shorten.short_url, full_url(shorten.short_url)
+  %td.long-url= shorten.long_url
+  %td.delete
+    - if signed_in? and current_user == shorten.user
+      = link_to 'Delete', shorten_path(shorten), method: 'DELETE', confirm: 'This link will no longer work. Are you sure?'
