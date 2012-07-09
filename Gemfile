@@ -24,6 +24,7 @@ group :development, :test do
   gem 'fabrication'
   gem 'ffaker'
   gem 'fuubar'
+  gem 'mongoid-rspec'
   gem 'rspec', '2.7'
   gem 'rspec-rails', '2.7'
   gem 'rspec-core', '2.7'

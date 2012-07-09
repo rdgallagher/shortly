@@ -2,43 +2,38 @@ require 'spec_helper'
 
 describe ShortensController do
 
-  describe "GET 'index'" do
-    it "returns http success" do
-      get 'index'
-      response.should be_success
+  context "with mocks" do
+
+    before :each do
+      @shorten = Fabricate(:shorten)
     end
 
-    it "assigns a list of all shortens" do
+    describe "GET index" do
+      it "assigns all Shortens to @shortens" do
+        pending "Mongoid and Kaminari"
 
+        Shorten.stub!(:desc).and_return [ @shorten ]
+        get :index
+        assigns(:shortens).should eq [ @shorten ]
+      end
     end
-  end
 
-  describe "GET 'show'" do
-    it "returns http success" do
-      get 'show'
-      response.should be_success
+    describe "GET show" do
+      it "increments hit count" do
+        Shorten.stub!(:where).and_return [ @shorten ]
+        get :show
+        @shorten.hit_count.should == 1
+      end
+
+      it "redirects to long_url" do
+        Shorten.stub!(:where).and_return [ @shorten ]
+        get :show
+        response.should be_redirect
+      end
     end
-  end
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
-      response.should be_success
-    end
-  end
+    describe "POST create" do
 
-  describe "GET 'create'" do
-    it "returns http success" do
-      get 'create'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'destroy'" do
-    it "returns http success" do
-      get 'destroy'
-      response.should be_success
     end
   end
-
 end

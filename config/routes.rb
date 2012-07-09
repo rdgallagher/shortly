@@ -1,6 +1,6 @@
 Shortly::Application.routes.draw do
 
-  root to: "shortens#index"
+  root to: 'shortens#index'
 
   devise_for :users, skip: [:sessions]
   as :user do
