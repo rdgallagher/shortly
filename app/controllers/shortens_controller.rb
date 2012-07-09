@@ -24,21 +24,21 @@ class ShortensController < ApplicationController
     @shorten = Shorten.new(params[:shorten])
 
     # Add protocol if missing
-    @shorten.long_url = 'http://' + @shorten.long_url unless @shorten.long_url.start_with?('http://', 'https://')
+    @shorten.long_url = 'http://' + @shorten.long_url unless @shorten.long_url.blank? or @shorten.long_url.start_with?('http://', 'https://')
 
     # Assign SecureRandom short_url - if exists, pick another
-    while !@shorten.valid?
+    begin
       @shorten.short_url = SecureRandom.urlsafe_base64(4)
-    end
+    end while Shorten.where(short_url: @shorten.short_url).exists?
 
     current_user.shortens << @shorten if signed_in?
 
-    # No need to validate here as we did so in the loop earlier
-    if @shorten.save(validate: false)
+    if @shorten.save
       flash[:success] = "Here is your short URL: <a href='#{full_url(@shorten.short_url)}' target='_blank'>#{full_url(@shorten.short_url)}</a>".html_safe
       redirect_to :back
     else
-      render :new
+      flash[:error] = "That URL was invalid."
+      redirect_to :back
     end
   end
 

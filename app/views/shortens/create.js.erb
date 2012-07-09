@@ -1,9 +1,0 @@
-$('#new_email .alert').remove();
-
-<% if @shorten.errors.any? %>
-  <% @shorten.errors.full_messages.each do |e| %>
-    $('#new_email').append('<p class="alert alert-error"><%= e %></p>');
-  <% end %>
-<% else %>
-  $('#new_email').append('<p class="alert alert-success">Thank you. You will be the first to know when we launch.</p>');
-<% end %>
