@@ -1,5 +1,7 @@
-Short.ly
-========
+[Short.ly](http://short-ly.herokuapp.com/)
+==========
+
+
 
 Life is too short for long URLs! So it's a URL shortener, implemented in [Ruby on Rails](http://rubyonrails.org/).
 
@@ -16,9 +18,10 @@ Short.ly uses [MongoDB](http://www.mongodb.org/), strictly for the fun of it. So
 
 And mainly because of its name, we're running the [Unicorn](http://unicorn.bogomips.org/)* app server. Just type `unicorn` in the app root, or mimic the way it gets run on [Heroku](http://heroku.com/) by typing `foreman start` - you will need the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
-* okay, it's [fast on Heroku](http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html) too!
+(* okay, it's [fast on Heroku](http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html) too!)
 
 Enjoy
 -----
 
 The rest is pretty self-explanatory, and life's too short - so just enjoy!
+
